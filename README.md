@@ -53,13 +53,13 @@ Trained model weight and data will appear in the path given by the TrainedModelW
 Figure 3. Net architecture 
 
 # Net architecture
- The net architecture is shown in Figure 3   based on standard fully convolutional neural (FCN) for semantic segmentation with  two additional inputs:
-Pointer point mask: A binary mask with a  single point within the target segment marked on it as 1 (the rest of the pixels are 0). 
-ROI Mask: A binary mask that covers (or limits) the region of the image where the segment can be found (could cover the entire image). 
+ The net architecture is shown in Figure 3.c   based on standard fully convolutional neural (FCN) for semantic segmentation (Figure 3.a) with  two additional inputs:
+Pointer point mask: A binary mask with a  single point within the target segment marked on it as 1 (Figure 3.b). 
+ROI Mask: A binary mask that covers (or limits) the region of the image where the segment can be found (Figure 3.c). 
 
-The Pointer mask and ROI mask are each processed using a convolution layer to generate two distinct attentions map in the same shape as the feature map generates from the image after the first convolutional layer (Figure 3).
+The Pointer mask and ROI mask are each processed using a convolution layer to generate two distinct attentions map in the same shape as the feature map generates from the image after the first convolutional layer (Figure 3c).
 The attention map generated from the Pointer mask is merged with the feature map generated from the image using elementwise multiplication to the generate merged feature map 1 (Figure 3) 
-Merged map  1 is then merged with the attention map generated from the ROI mask using elementwise addition to generate a second merged map which is used as input for the next layers of the FCN (Figure 3). 
+Merged map  1 is then merged with the attention map generated from the ROI mask using elementwise addition to generate a second merged map which is used as input for the next layers of the FCN (Figure 3c). 
 
 # Results
 The net achive 62% Intersection over union (IOU) for segmentatin of familiar classes it encounter during training and about 50% IOU for segmentation of unfamiliar classes it did not encounter during training. 
