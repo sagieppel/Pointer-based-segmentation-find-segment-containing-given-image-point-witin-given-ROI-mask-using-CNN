@@ -50,7 +50,7 @@ Trained model weight and data will appear in the path given by the TrainedModelW
 
 
 ![](/Image3.png)
-Figure 3. Net architecture 
+Figure 3. Net architecture. a) Standart fully convolutional net (FCN) for semantic segmentation. b) FCN with additional input of pointer point. c) FCN with two addtional inputs of ROI mask and Pointer point mask 
 
 # Net architecture
  The net architecture is shown in Figure 3.c   based on standard fully convolutional neural (FCN) for semantic segmentation (Figure 3.a) with  two additional inputs:
