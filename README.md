@@ -7,7 +7,7 @@ Figure 1. Pointer based segmentation
 
 This net can also achieve full image segmentation by running sequentially, one segment at a time on the image and stitching the output segments into a single segmentation map (Figure 2).
 The net is class independent. Hence, it can segment even things corresponding to unfamiliar categories it did not encounter in the training stage.
-The net is capable of instance aware segmentation of individual objects of the same class in a group (Figure 1.b).
+The net is capable of instance aware segmentation of individual objects in a group (Figure 1.b).
 In addition, the net can  also segment stuff none object classes such as sky and ocean( Figure 1.a)
 
 ![](/Figure2.png)
