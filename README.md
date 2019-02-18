@@ -16,7 +16,7 @@ Figure 2. Sequential region by region Pointer point based segmentation
 
 # Using the net
 # Setup
-This network was run with [Python 3.7 Anaconda] (https://www.anaconda.com/distribution/)  package and [Pytorch 1.0] (https://pytorch.org/).
+This network was run with [Python 3.7 Anaconda](https://www.anaconda.com/distribution/)  package and [Pytorch 1.0](https://pytorch.org/).
 The net was trained using the [COCO panoptic data set](http://cocodataset.org/#download)
 Trained model can be download from  [here](https://drive.google.com/file/d/1c2aAH_sf2kynwbkOiN-iXY7esm2wcrvM/view?usp=sharing)
 
