@@ -49,7 +49,7 @@ Trained model weight and data will appear in the path given by the TrainedModelW
 8) Run script.
 
 
-![](/Figure3.png)
+![](/Image3.png)
 Figure 3. Net architecture 
 
 # Net architecture
