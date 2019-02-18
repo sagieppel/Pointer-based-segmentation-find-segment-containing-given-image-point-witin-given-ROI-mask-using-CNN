@@ -20,7 +20,7 @@ This network was run with [Python 3.7 Anaconda] (https://www.anaconda.com/distri
 The net was trained using the [COCO panoptic data set](http://cocodataset.org/#download)
 Trained model can be download from  [here](https://drive.google.com/file/d/1c2aAH_sf2kynwbkOiN-iXY7esm2wcrvM/view?usp=sharing)
 
-# Run segmentation for full image  (
+# Run segmentation for full image
 ## In Run_Segmentation.py:
 1) Train the net or download the pre-trained model from [here](https://drive.google.com/file/d/1c2aAH_sf2kynwbkOiN-iXY7esm2wcrvM/view?usp=sharing)
 2) Set the path to the pre-trained model in the Trained_model_path parameter
