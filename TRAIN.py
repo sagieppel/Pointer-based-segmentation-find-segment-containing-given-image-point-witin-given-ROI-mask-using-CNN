@@ -72,8 +72,8 @@ for itr in range(1,MAX_ITERATION): # Main training loop
     Loss = -torch.mean((OneHotLabels * torch.log(Prob + 0.0000001)))  # Calculate loss between prediction and ground truth label
     Loss.backward() # Backpropogate loss
     optimizer.step() # Apply gradient descent change to weight
-    if AVGLoss==-1:  AVGLoss=float(Loss.data) #Calculate average loss for display
-    else: AVGLoss=AVGLoss*0.999+0.001*float(Loss.data) # Intiate runing average loss
+    if AVGLoss==-1:  AVGLoss=float(Loss.data.cpu().numpy()) #Calculate average loss for display
+    else: AVGLoss=AVGLoss*0.999+0.001*float(Loss.data.cpu().numpy()) # Intiate runing average loss
 # --------------Save trained model------------------------------------------------------------------------------------------------------------------------------------------
     if itr % 10000 == 0 and itr>0: #Save model weight once every 10k steps
         print("Saving Model to file in "+TrainedModelWeightDir)
