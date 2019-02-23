@@ -1,7 +1,10 @@
 # Finding a segment containing a given image pixel within a given region-of-interest (ROI) mask using a convolutional net (CNN), and its application for sequential region-by-region instance-aware segmentation of images with unfamiliar classes.
 
 
-This work examines the use of fully convolutional nets (FCN) for finding a binary mask corresponding to a single image segment given a single pixel within this segment region (Figure 1). The target segment region is  also limited by  and given a region of interest (ROI) mask that limits the area were the segment can be found (Figure 1). The net receives an image and a  single arbitrary point inside the target segment. An additional input is an ROI mask that restricts to the region of the image where the segment can be found. It returns a binary mask of the segment on which the pointer point is located (Figure 1). 
+This work examines the use of fully convolutional nets (FCN) for finding a binary mask corresponding to a single image segment given a single pixel within this segment region (Figure 1). The target segment region is  also limited by  and given a region of interest (ROI) mask that limits the area were the segment can be found (Figure 1). The net receives an image and a  single arbitrary point inside the target segment. An additional input is an ROI mask that restricts to the region of the image where the segment can be found. It returns a binary mask of the segment on which the pointer point is located (Figure 1).
+
+The method is explained in [this document](https://arxiv.org/abs/1902.07810) 
+
 ![](/Figure1.png)
 Figure 1. Pointer based segmentation
 
