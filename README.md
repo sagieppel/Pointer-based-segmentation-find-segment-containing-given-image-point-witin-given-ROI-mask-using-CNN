@@ -1,4 +1,4 @@
-# Category independent segmentation with convulotional nets:
+# Category independent segmentation with convolutional nets:
 # Finding a segment containing a given image pixel within a given region-of-interest (ROI) mask using a convolutional net (CNN), and its application for sequential region-by-region instance-aware segmentation of images with unfamiliar categories.
 
 
