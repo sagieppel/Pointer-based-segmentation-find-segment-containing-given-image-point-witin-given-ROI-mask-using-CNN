@@ -1,7 +1,8 @@
 ## Category independent segmentation with convolutional nets:
 ## Finding a segment containing a given image pixel within a given region-of-interest (ROI) mask using a convolutional net (CNN), and its application for sequential region-by-region instance-aware segmentation of images with unfamiliar categories.
 
-Stronger but harder to train version of this net can be found [here](https://github.com/sagieppel/Generator-evaluator-selector-net-a-modular-approach-for-panoptic-segmentation/blob/master/PointerSegmentation/).
+[*Stronger but harder to train version of this net can be found here](https://github.com/sagieppel/Generator-evaluator-selector-net-a-modular-approach-for-panoptic-segmentation/blob/master/PointerSegmentation/).
+
 Category independent segmentation using pointer segmentation net.
 This work examines the use of fully convolutional nets (FCN) for finding a binary mask corresponding to a single image segment given a single pixel within this segment region (Figure 1). The target segment region is  also limited by  and given a region of interest (ROI) mask that limits the area were the segment can be found (Figure 1). The net receives an image and a  single arbitrary point inside the target segment. An additional input is an ROI mask that restricts to the region of the image where the segment can be found. It returns a binary mask of the segment on which the pointer point is located (Figure 1).
 
