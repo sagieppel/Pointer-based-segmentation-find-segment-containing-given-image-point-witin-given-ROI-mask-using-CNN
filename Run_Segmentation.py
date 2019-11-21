@@ -44,7 +44,8 @@ for ii in range(100):
         PointerMask[0, Y, X] = 1
 
 #==============run inference predict segment==================================================================================
-        Prob, PredLb = Net.forward(Images=I, Pointer=PointerMask,ROI=ROIMask)  # Run net inference and get prediction
+        with torch.autograd.no_grad():
+               Prob, PredLb = Net.forward(Images=I, Pointer=PointerMask,ROI=ROIMask)  # Run net inference and get prediction
         PredLb=PredLb.data.cpu().numpy()
         ROIMask[PredLb == 1] = 0 # Remove predicted segment from the ROI mask
 
