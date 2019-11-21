@@ -47,7 +47,8 @@ for Reader.itr in range(len(Reader.FileList)):
     for ii in range(100):
         PointerMask, Images, ROIMask=Reader.LoadNextGivenROI(NewImg=(ii==0))
       #  Reader.DisplayTrainExample(Images[0], ROIMask[0], SegmentMask[0], PointerMask[0])
-        Prob, PredLb = Net.forward(Images=Images, Pointer=PointerMask,ROI=ROIMask)  # Run net inference and get prediction
+        with torch.autograd.no_grad():
+                 Prob, PredLb = Net.forward(Images=Images, Pointer=PointerMask,ROI=ROIMask)  # Run net inference and get prediction
         PredLb=PredLb.data.cpu().numpy()
         Reader.BROIMask[PredLb == 1] = 0 # Remove predicted segment from the ROI mask
 
