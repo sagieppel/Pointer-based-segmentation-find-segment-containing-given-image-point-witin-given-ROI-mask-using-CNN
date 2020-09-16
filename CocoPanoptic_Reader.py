@@ -88,7 +88,7 @@ class Reader:
                     TotAreas+=Sgs[ind]['Area']
                     if TotAreas>=r:
                         break
-            else: ind=np.random.randint(SumAreas) #Pick Random segment with equal probability
+            else: ind=np.random.randint(len(Sgs)) #Pick Random segment with equal probability
            # print("ind" + str(ind))
             SelectedSg=Sgs.pop(ind)
             SumAreas-=SelectedSg["Area"]
