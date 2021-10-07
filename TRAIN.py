@@ -39,7 +39,7 @@ Learning_Rate=np.ones(100)*2e-5 # Initial learning rate
 Learning_Rate_Decay=Learning_Rate[0]/20
 MaxPixels=340000*4# Max pixel in batch can have (to keep oom out of memory problems) if the image larger it will be resized.
 TrainLossTxtFile=TrainedModelWeightDir+"TrainLoss.txt" #Where train losses will be writen
-Weight_Decay=1e-5# Weight for the weight decay loss function
+Weight_Decay=1e-4# Weight for the weight decay loss function
 MAX_ITERATION = int(100000010) # Max  number of training iteration
 #----------------------------------------Create reader for data set--------------------------------------------------------------------------------------------------------------
 Reader=Data_Reader.Reader(ImageDir=ImageDir,AnnotationDir=AnnotationDir, DataFile=DataFile, MaxBatchSize=MaxBatchSize,MinSize=MinSize,MaxSize=MaxSize,MaxPixels=MaxPixels,TrainingMode=True)
